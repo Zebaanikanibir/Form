@@ -79,7 +79,7 @@ const onSubmit =(data) =>{
         <div className="App mt-5">
             <h3>Log In</h3>
               <form id="logedIn" onSubmit={handleSubmit(onSubmit)}>
-             
+              <label htmlFor="email" className="label">Email</label> <br />
                 <input className="input" id="email" type="email" placeholder="Enter Email"{...register('email', {
                     required: "this is a required", pattern: {
                         value: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
@@ -87,6 +87,7 @@ const onSubmit =(data) =>{
                     }
                 })} /> <br />
                 {errors.email && <p>{errors.email.message}</p>}
+                <label htmlFor="password">Password</label> <br />
               <input className="input" id="password" type="password" placeholder="password" {...register('password', {
                     required: "this is a required", maxLength: {
                         value: 10,

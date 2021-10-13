@@ -131,7 +131,7 @@ const Register = () => {
                     }
                 })} /> <br />
                 {errors.address && <p>{errors.address.message}</p>}
-                <input className="input" className="primary" type="submit" />
+                <input className="input primary" type="submit" />
 
 
 
